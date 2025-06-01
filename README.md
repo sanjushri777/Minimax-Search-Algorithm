@@ -103,7 +103,7 @@ def minimax(game)
 end
 
 <h3>Program</h3>
-:
+
 
 ```python
 import time
