@@ -1,6 +1,6 @@
 <h1>ExpNo 5 : Implement Minimax Search Algorithm for a Simple TIC-TAC-TOE game</h1> 
-<h3>Name:           </h3>
-<h3>Register Number/Staff Id:          </h3>
+<h3>Name: SANJUSHRI A          </h3>
+<h3>Register Number:212223040187</h3>
 <H3>Aim:</H3>
 <p>
     Implement Minimax Search Algorithm for a Simple TIC-TAC-TOE game
@@ -101,8 +101,8 @@ def minimax(game)
         return scores[min_score_index]
     end
 end
-###PROGRAM:
-```pyhton
+###Program:
+```python
 import time
 
 class Game:
@@ -110,15 +110,15 @@ class Game:
         self.initialize_game()
 
     def initialize_game(self):
-        self.current_state = [['.','.','.'],
-                              ['.','.','.'],
-                              ['.','.','.']]
+        self.current_state = [['.', '.', '.'],
+                              ['.', '.', '.'],
+                              ['.', '.', '.']]
         self.player_turn = 'X'  # Player X always plays first
 
     def draw_board(self):
         for i in range(3):
             for j in range(3):
-                print('{}|'.format(self.current_state[i][j]), end=" ")
+                print(f'{self.current_state[i][j]}|', end=" ")
             print()
         print()
 
@@ -155,7 +155,7 @@ class Game:
         # Check for tie or game continuation
         for row in self.current_state:
             if '.' in row:
-                return None  # Game is still going
+                return None  # Game is still ongoing
 
         return '.'  # Tie
 
@@ -223,7 +223,6 @@ class Game:
                     print('The winner is O (AI)!')
                 elif self.result == '.':
                     print("It's a tie!")
-
                 self.initialize_game()
                 return
 
@@ -232,8 +231,8 @@ class Game:
                     start = time.time()
                     (m, qx, qy) = self.min()
                     end = time.time()
-                    print('Evaluation time: {}s'.format(round(end - start, 7)))
-                    print('Recommended move: X = {}, Y = {}'.format(qx, qy))
+                    print(f'Evaluation time: {round(end - start, 7)}s')
+                    print(f'Recommended move: X = {qx}, Y = {qy}')
 
                     try:
                         px = int(input('Enter the X coordinate (0-2): '))
@@ -262,6 +261,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 
 <hr>
 <h2>Sample Input and Output</h2>
